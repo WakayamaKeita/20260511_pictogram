@@ -1,0 +1,89 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: linear-gradient(180deg, #edf2ff 0%, #f8fafc 100%);
+  color: var(--text);
+}
+
+.page {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.page-header p {
+  margin: 1rem auto 0;
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.icon-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.icon-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.65rem 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'wght' 400, 'FILL' 0, 'GRAD' 0, 'opsz' 48;
+  display: inline-block;
+  font-size: 3.25rem;
+  color: #1f2937;
+  margin-bottom: 0.85rem;
+}
+
+.icon-card p {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.75rem 0 3rem;
+  }
+
+  .icon-card {
+    padding: 1.5rem 0.9rem;
+  }
+
+  .material-symbols-outlined {
+    font-size: 2.75rem;
+  }
+}
